@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+.env.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+
+# Build folders
+dist/
+build/
+
+# Uploads (if storing files locally)
+uploads/
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
