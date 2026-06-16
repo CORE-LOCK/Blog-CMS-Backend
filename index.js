@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import blogRoutes from "./routes/blogRoutes.js";
 import authRoutes from "./routes/authRoutes.js"
+import generateBlogRoutes from "./routes/generateBlog.js";
+import searchBlogs from "./routes/search.js";
 
 dotenv.config();
 const app = express();
@@ -20,7 +22,9 @@ const dbconnect = async () => {
 };
 
 app.use("/api/blogs", blogRoutes);
-app.use("/api/auth", authRoutes)
+app.use("/api/auth", authRoutes);
+app.use("/api", generateBlogRoutes);
+app.use("/api/search", searchBlogs);
 
 app.listen(process.env.port, ()=>{
     console.log(`server is running on port ${process.env.port}`);
