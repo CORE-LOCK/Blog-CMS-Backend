@@ -1,11 +1,11 @@
-import BlogModel from "../models/BlogModel.js";
+import BlogModel from "../models/blog.js";
 
 
 export const searchBlogs = async (req, res)=>{
 try{
     const {query} = req.query;
 
- const searchResults = await BlogModel.find({
+ const searchResults = await blogmodel.find({
     title: {
         $regex: query,
         $options:'i',
